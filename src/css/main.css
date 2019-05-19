@@ -52,7 +52,7 @@ a:hover {
 }
 
 #button-logout {
-  background-color: #474C9C;
+  background-color: #3BCDE2;
   outline: none;
   border: none;
 }
@@ -210,8 +210,8 @@ button.btn-xl {
 }
 
 .btn-search {
-  background-color: #FFD234;
-  color: #984BDC;
+  background-color: white;
+  color: #3BCDE2;
 }
 
 .btn-share {
