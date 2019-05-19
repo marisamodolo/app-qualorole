@@ -55,7 +55,7 @@ A proposta é que os usuários tenha uma melhor experiência para localização 
   cifragem/descifragem.
 
 ## Roteiro
-[link](https://github.com/marisamodolo/app-qualorole/blob/master/src/img/app-navigation.jpg)
+![Image Prototype](https://github.com/marisamodolo/app-qualorole/blob/master/src/img/app-navigation.jpg)
 ## Protótipo
 https://marvelapp.com/725bfdb
 #### versão 1.0.0 (liberado)
