@@ -55,7 +55,7 @@ A proposta é que os usuários tenha uma melhor experiência para localização 
   cifragem/descifragem.
 
 ## Roteiro
-e a interface construída neste [link](https://app.talento.laboratoria.la/profile/HFOoMpOreBU2psCcjjLg5O2EWEv2).
+[link](https://github.com/marisamodolo/app-qualorole/blob/master/src/img/app-navigation.jpg)
 ## Protótipo
 https://marvelapp.com/725bfdb
 #### versão 1.0.0 (liberado)
