@@ -1,0 +1,12 @@
+.style-logo-feed {
+    width: 60%;
+}
+
+.btn-nav {
+    width: 2.5rem;
+    margin: 20px;
+}
+
+.btn-nav :hover {
+    color: pink;
+}

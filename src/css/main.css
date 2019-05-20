@@ -5,7 +5,7 @@
 }
 
 .body {
-  background-color: #F7F2FA;
+  background-color: white;
 }
 
 a:hover {
@@ -48,7 +48,7 @@ a:hover {
 }
 
 .bg-purple {
-  background-color: #474C9C;
+  background-color: #3BCDE2;
 }
 
 #button-logout {
