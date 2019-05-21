@@ -60,11 +60,46 @@
             <input type=image src="src/img/icon-home.svg" href="feed.html" class="btn-nav">
           </li>
           <li class="nav-item active">
-            <input type=image src="src/img/icon-filter.svg" href="#" class="btn-nav">
+            <input type=image data-toggle="modal" data-target=".bd-example-modal-sm" src="src/img/icon-filter.svg" href="#" class="btn-nav">
           </li>
           <li class="nav-item active">
             <input type=image src="src/img/icon-add.svg" href="#" class="btn-nav">
           </li>
+            <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header border-0">
+                    <p class="modal-title mt-2 ml-2 modal-title dark-blue-font">QUAL ROLÊ?</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="ml-1 mb-1 form-check check-style">
+                    <input class="form-check-input position-static" type="checkbox" id="checkBar" value="option1" aria-label="...">
+                    <label class="font-style bg-transparent font-weight-bold align-middle" for="checkBar">BARES</label>
+                  </div>
+                  <div class="ml-1 mb-1 form-check check-style">
+                    <input class="form-check-input position-static" type="checkbox" id="checkShow" value="option1" aria-label="...">
+                    <label class="font-style bg-transparent font-weight-bold align-middle" for="checkShow">SHOWS</label>
+                  </div>
+                  <div class="ml-1 mb-1 form-check check-style">
+                    <input class="form-check-input position-static" type="checkbox" id="checkFest" value="option1" aria-label="...">
+                    <label class="font-style bg-transparent font-weight-bold align-middle" for="checkFest">FESTIVAIS</label>
+                  </div>
+                  <div class="ml-1 mb-1 form-check check-style">
+                    <input class="form-check-input position-static" type="checkbox" id="checkCult" value="option1" aria-label="...">
+                    <label class="font-style bg-transparent font-weight-bold align-middle" for="checkCult">CULTURAIS</label>
+                  </div>
+                  <div class="ml-1 mb-1 form-check check-style">
+                    <input class="form-check-input position-static" type="checkbox" id="checkGast" value="option1" aria-label="...">
+                    <label class="font-style bg-transparent font-weight-bold align-middle" for="checkGast">GASTRONÔMICOS</label>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button type="button" class="mr-1 mb-3 col-2 btn dark-blue-font"><strong>></strong></button>
+                  </div>
+                  </div>
+              </div>
+            </div>
           <!-- <li class="nav-item active">
             <a id="home-navbar" class="nav-link" href="#"></a>
           </li> -->
@@ -133,18 +168,6 @@
               </div>
             </div>
           </div>
-
-          <section id="filter-posts" class="section-filter d-flex justify-content-end">
-            <a class="nav-link dropdown-toggle style-filter" role="button" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              <h8>Filtrar</h8>
-            </a>
-            <div id="btnFilterVisibility" class="dropdown-menu" aria-labelledby="navbar-dropdown" data-filter="all">
-              <a class="dropdown-item btn" href="#" data-filter="all"><i class="fa "></i> Todos</a>
-              <a class="dropdown-item btn" href="#" data-filter="public"><i class="fa fa-globe"></i> Público</a>
-              <a class="dropdown-item btn" href="#" data-filter="private"><i class="fa fa-users"></i> Privado</a>
-            </div>
-          </section>
 
           <section id="posts-container">
             <div class="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
