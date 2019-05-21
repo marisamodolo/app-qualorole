@@ -6,7 +6,6 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="/src/css/modal.css">
   <link rel="stylesheet" type="text/css" media="screen" href="src/css/main.css">
   <link rel="stylesheet" type="text/css" media="screen" href="src/css/feed.css">
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
@@ -15,18 +14,11 @@
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
   <link rel="shortcut icon" href="src/img/favicon.ico" />
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="src/js/bootbox.min.js"></script>
 </head>
 
@@ -58,79 +50,79 @@
           <li class="nav-item"> <a href="#" id="profile-pic-nav"><img id="profile-pic-navbar"
                 class="rounded-circle pic-navbar"></a></li>
           <li class="nav-item active">
-            <input type=image src="src/img/icon-home.svg" href="feed.html" class="btn-nav">
+            <input id="home" type=image src="src/img/icon-home.svg" href="feed.html" class="btn-nav">
           </li>
           <li class="nav-item active">
-            <input type=image data-toggle="modal" data-target=".bd-example-modal-sm" src="src/img/icon-filter.svg"
-              href="#" class="btn-nav">
+            <input type=image data-toggle="modal" data-target=".bd-example-modal-sm" src="src/img/icon-filter.svg" href="#" class="btn-nav">
           </li>
           <li class="nav-item active">
-            <input id="eventModal" type=image src="src/img/icon-add.svg" href="#" class="btn-nav">
+            <input id="eventModal" data-toggle="modal" type=image data-target=".myModal" src="src/img/icon-add.svg" href="#" class="btn-nav">
           </li>
-
-          <!-- Modal que pega detalhes dos eventos -->
-          <div id="myModal" class="modal">
-            <div class="modal-content-event">
-              <span id="close" class="close">&times;</span>
-              <form id="createEvent" class="signup">
-                <input type="text" placeholder="Nome do Evento" id="event" class="input-event" />
-                <input type="text" placeholder="Categoria" id="category" class="input-event" />
-                <input type="text" placeholder="Data" id="date" class="input-event" />
-                <input type="text" placeholder="Local" id="local" class="input-event" />
-                <input type="text" placeholder="Endereço" id="address" class="input-event" />
-                <input type="text" placeholder="Preço" id="price" class="input-event" />
-                <input type="text" placeholder="Descrição" id="description" class="input-event" />
-                <input type="submit" class="input-event">
-              </form>
-
-              <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog"
-                aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-sm">
-                  <div class="modal-content">
-                    <div class="modal-header border-0">
-                      <p class="modal-title mt-2 ml-2 modal-title dark-blue-font">QUAL ROLÊ?</p>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="ml-1 mb-1 form-check check-style">
-                      <input class="form-check-input position-static" type="checkbox" id="checkBar" value="option1"
-                        aria-label="...">
-                      <label class="font-style bg-transparent font-weight-bold align-middle"
-                        for="checkBar">BARES</label>
-                    </div>
-                    <div class="ml-1 mb-1 form-check check-style">
-                      <input class="form-check-input position-static" type="checkbox" id="checkShow" value="option1"
-                        aria-label="...">
-                      <label class="font-style bg-transparent font-weight-bold align-middle"
-                        for="checkShow">SHOWS</label>
-                    </div>
-                    <div class="ml-1 mb-1 form-check check-style">
-                      <input class="form-check-input position-static" type="checkbox" id="checkFest" value="option1"
-                        aria-label="...">
-                      <label class="font-style bg-transparent font-weight-bold align-middle"
-                        for="checkFest">FESTIVAIS</label>
-                    </div>
-                    <div class="ml-1 mb-1 form-check check-style">
-                      <input class="form-check-input position-static" type="checkbox" id="checkCult" value="option1"
-                        aria-label="...">
-                      <label class="font-style bg-transparent font-weight-bold align-middle"
-                        for="checkCult">CULTURAIS</label>
-                    </div>
-                    <div class="ml-1 mb-1 form-check check-style">
-                      <input class="form-check-input position-static" type="checkbox" id="checkGast" value="option1"
-                        aria-label="...">
-                      <label class="font-style bg-transparent font-weight-bold align-middle"
-                        for="checkGast">GASTRONÔMICOS</label>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                      <button type="button" class="mr-1 mb-3 col-2 btn dark-blue-font"><strong>></strong></button>
-                    </div>
-                  </div>
-
+          <div class="modal fade myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <div class="modal-header border-0">
+                  <p class="modal-title mt-2 ml-2 modal-title dark-blue-font">QUAL ROLÊ?</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
-              </div>
-              <!-- <li class="nav-item active">
+                <form id="createEvent" class="signup">                    
+                  <input type="text" placeholder="Nome do Evento" id="event" class="input-event"/>
+                  <input type="text" placeholder="Data" id="date" class="input-event"/>
+                  <input type="text" placeholder="Local" id="local" class="input-event"/>
+                  <input type="text" placeholder="Endereço" id="address" class="input-event"/>
+                  <input type="text" placeholder="Preço" id="price" class="input-event"/>
+                  <input type="text" placeholder="Descrição" id="description" class="input-event"/>
+                  <input type="text" placeholder="URL Foto" id="photo" class="input-event"/>
+                  <select id="category" class="input-event"> 
+                    <option value="bares">Bares</option>
+                    <option value="shows">Shows</option>
+                    <option value="festivais">Festivais</option>
+                    <option value="culturais">Culturais</option>
+                    <option value="gastronomicos">Gastronômicos</option>
+                  </select>
+                  <input type="submit" class="input-event"> 
+                </form> 
+                </div>
+            </div>
+          </div>
+          <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <div class="modal-header border-0">
+                  <p class="modal-title mt-2 ml-2 modal-title dark-blue-font">QUAL ROLÊ?</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="ml-1 mb-1 form-check check-style">
+                  <input class="form-check-input position-static" name="filter-check" type="checkbox" id="bares" value="option1" aria-label="...">
+                  <label class="font-style bg-transparent font-weight-bold align-middle" for="bares">BARES</label>
+                </div>
+                <div class="ml-1 mb-1 form-check check-style">
+                  <input class="form-check-input position-static" name="filter-check" type="checkbox" id="shows" value="option1" aria-label="...">
+                  <label class="font-style bg-transparent font-weight-bold align-middle" for="shows">SHOWS</label>
+                </div>
+                <div class="ml-1 mb-1 form-check check-style">
+                  <input class="form-check-input position-static" name="filter-check" type="checkbox" id="festivais" value="option1" aria-label="...">
+                  <label class="font-style bg-transparent font-weight-bold align-middle" for="festivais">FESTIVAIS</label>
+                </div>
+                <div class="ml-1 mb-1 form-check check-style">
+                  <input class="form-check-input position-static" name="filter-check" type="checkbox" id="culturais" value="option1" aria-label="...">
+                  <label class="font-style bg-transparent font-weight-bold align-middle" for="culturais">CULTURAIS</label>
+                </div>
+                <div class="ml-1 mb-1 form-check check-style">
+                  <input class="form-check-input position-static" name="filter-check" type="checkbox" id="gastronomicos" value="option1" aria-label="...">
+                  <label class="font-style bg-transparent font-weight-bold align-middle" for="gastronomicos">GASTRONÔMICOS</label>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <button type="button" id="filter" class="mr-1 mb-3 col-2 btn dark-blue-font"><strong>></strong></button>
+                </div>
+                </div>
+            </div>
+          </div>
+          <!-- <li class="nav-item active">
             <a id="home-navbar" class="nav-link" href="#"></a>
           </li> -->
         </ul>
@@ -162,189 +154,10 @@
               class="btn btn-circle btn-xl row justify-content-center align-items-center"><i
                 class="fas fa-plus"></i></button></div>
 
-          <div class="hidden" id="textbox">
-            <div class="card-header color-card">
-              <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-                <li class="nav-item">
-                  <a class="color-text nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab"
-                    aria-controls="posts" aria-selected="true">Fazer uma publicação</a>
-                </li>
-                <li class="nav-item">
-                  <a class="color-text nav-link" id="images-tab" data-toggle="tab" role="tab" aria-controls="images"
-                    aria-selected="false" href="#images">Imagens</a>
-                </li>
-              </ul>
-            </div>
-            <div class="card-body card">
-              <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
+        <!-- Card destaques -->
+        <div id="cardSpot"></div>
+        <div id="cardCommon"></div>
 
-                </div>
-                <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
-                  <div class="form-group">
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="customFile">
-                      <label class="custom-file-label" for="customFile">Enviar Imagem</label>
-                    </div>
-                  </div>
-                  <div class="py-4"></div>
-                </div>
-              </div>
-              <div class="btn-toolbar justify-content-between">
-                <div class="btn-group">
-                  <button type="submit" class="btn-feed btn-share btn-30rem" id="btn-share"
-                    disabled="true">Salvar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <section id="posts-container">
-            <div class="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Editar Postagem</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <form class="row justify-content-center">
-                      <textarea name="edit" class="textarea" id="edit-post" cols="60" rows="4"></textarea>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary color-icons" data-dismiss="modal">Fechar</button>
-                    <button type="button" id="btn-send-modal" class="btn btn-primary">Salvar</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Card destaques -->
-          <h1 class="card-title">Rolês de hoje</h1>
-          <h2 class="card-subtitle">Destaques</h2>
-          <div class="card mb-3">
-            <img class="card-img-top"
-              src="http://www.teatrosergiocardoso.org.br/wp-content/uploads/2019/02/730-Leekyung-Kim.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Van Gogh por Gauguin</h5>
-              <p class="card-text">Montagem protagonizada por Alex Morenno e Augusto Zacchi estreia no dia 22 de abril,
-                no Teatro Sérgio Cardoso.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="./map.html" class="btn btn-outline-primary">Visitar</a>
-                  <a href="#" class="btn btn-outline-primary">Editar</a>
-                </div>
-                <p class="card-text"><small class="text-muted">9 minutos</small>
-                </p>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="card mb-3">
-            <img class="card-img-top"
-              src="https://abrilveja.files.wordpress.com/2018/11/3f0a8967.jpg?quality=70&strip=info&w=1024&h=683"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Quadrinhos no MIS</h5>
-              <p class="card-text">Revistas, artes originais e itens raros fazem parte da mostra que inaugura em
-                novembro.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="./map.html" class="btn btn-outline-primary">Visitar</a>
-                  <a href="#" class="btn btn-outline-primary">Editar</a>
-                </div>
-                <p class="card-text"><small class="text-muted">9 minutos</small>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Cards comuns -->
-          <h2 class="card-subtitle">Outros</h2>
-          <div class="card-deck">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top"
-                src="https://www.portalr3.com.br/wp-content/uploads/2019/03/20190327-tarsila_morro_da_favela.jpg"
-                alt="Imagem de capa do card">
-              <div class="card-body">
-                <h5 class="card-title">Tarsila Popular</h5>
-                <p class="card-text">O MASP recebe a maior exposição dedicada à Tarsila do Amaral com 92 obras.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <a href="./map.html" class="btn btn-outline-primary">Visitar</a>
-                    <a href="#" class="btn btn-outline-primary">Editar</a>
-                  </div>
-                  <p class="card-text"><small class="text-muted">9 minutos</small>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top"
-                src="https://observatoriodatelevisao.bol.uol.com.br/wp-content/uploads/2017/09/hebe.jpg"
-                alt="Imagem de capa do card">
-              <div class="card-body">
-                <h5 class="card-title">Hebe Eterna</h5>
-                <p class="card-text">Exposição apresenta a história pessoal e trajetória profissional de Hebe Camargo.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <a href="./map.html" class="btn btn-outline-primary">Visitar</a>
-                    <a href="#" class="btn btn-outline-primary">Editar</a>
-                  </div>
-                  <p class="card-text"><small class="text-muted">9 minutos</small>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-          <div class="card-deck">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top"
-                src="https://teatrofolha.com.br/wp-content/uploads/2019/05/Banner-Mobile-O-Pequeno-Principe.png"
-                alt="Imagem de capa do card">
-              <div class="card-body">
-                <h5 class="card-title">O Pequeno Príncipe</h5>
-                <p class="card-text">Montagem mistura presença de atores com bonecos e utiliza técnica de teatro com luz
-                  negra para encantar crianças e adultos.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <a href="./map.html" class="btn btn-outline-primary">Visitar</a>
-                    <a href="#" class="btn btn-outline-primary">Editar</a>
-                  </div>
-                  <p class="card-text"><small class="text-muted">9 minutos</small>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="http://www.infoartsp.com.br/imgs/c5b3555d92.jpg"
-                alt="Imagem de capa do card">
-              <div class="card-body">
-                <h5 class="card-title">Djanira: a memória de seu povo</h5>
-                <p class="card-text">Mostra reúne trabalhos da artista brasileira Djanira da Motta e Silva.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <a href="./map.html" class="btn btn-outline-primary">Visitar</a>
-                    <a href="#" class="btn btn-outline-primary">Editar</a>
-                  </div>
-                  <p class="card-text"><small class="text-muted">9 minutos</small>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
 
         </div>
         <div class="col-md-3 ">
@@ -354,10 +167,10 @@
               <h6 class="card-subtitle mb-2 text-muted"></h6>
               <p class="card-text"></p>
               <section>
-                <!-- <img src="images/img-fisica.svg" alt="Ícone Matéria Física" class="icons-card">
+                <img src="images/img-fisica.svg" alt="Ícone Matéria Física" class="icons-card">
                 <img src="images/img-biologia.svg" alt="Ícone Matéria Biologia" class="icons-card">
                 <img src="images/img-artes.svg" alt="Ícone Matéria Artes" class="icons-card">
-                <img src="images/img-quimica.svg" alt="Ícone Matéria Química" class="icons-card"> -->
+                <img src="images/img-quimica.svg" alt="Ícone Matéria Química" class="icons-card">
               </section>
               <a href="#" class="card-link card-foruns">Anotações</a>
             </div>
@@ -379,10 +192,10 @@
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="src/js/config.js"></script>
-  <script src="/src/js/eventData.js"></script>
-  <script src="/src/js/creatEvent.js"></script>
-  <!-- <script src="src/js/publica.js"></script> -->
+  <script src="src/js/publica.js"></script>
   <script src="src/js/login.js"></script>
+  <script src="src/js/eventData.js"></script>
+  <script src="src/js/template.js"></script>
 </body>
 
 </html>
