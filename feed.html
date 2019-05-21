@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="/src/css/modal.css">
   <link rel="stylesheet" type="text/css" media="screen" href="src/css/main.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="src/css/feed.css">    
+  <link rel="stylesheet" type="text/css" media="screen" href="src/css/feed.css">
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
@@ -61,7 +61,8 @@
             <input type=image src="src/img/icon-home.svg" href="feed.html" class="btn-nav">
           </li>
           <li class="nav-item active">
-            <input type=image data-toggle="modal" data-target=".bd-example-modal-sm" src="src/img/icon-filter.svg" href="#" class="btn-nav">
+            <input type=image data-toggle="modal" data-target=".bd-example-modal-sm" src="src/img/icon-filter.svg"
+              href="#" class="btn-nav">
           </li>
           <li class="nav-item active">
             <input id="eventModal" type=image src="src/img/icon-add.svg" href="#" class="btn-nav">
@@ -69,56 +70,67 @@
 
           <!-- Modal que pega detalhes dos eventos -->
           <div id="myModal" class="modal">
-              <div class="modal-content-event">
-                <span id="close" class="close">&times;</span>
-                <form id="createEvent" class="signup">                    
-                  <input type="text" placeholder="Nome do Evento" id="event" class="input-event"/>
-                  <input type="text" placeholder="Categoria" id="category" class="input-event"/>
-                  <input type="text" placeholder="Data" id="date" class="input-event"/>
-                  <input type="text" placeholder="Local" id="local" class="input-event"/>
-                  <input type="text" placeholder="Endereço" id="address" class="input-event"/>
-                  <input type="text" placeholder="Preço" id="price" class="input-event"/>
-                  <input type="text" placeholder="Descrição" id="description" class="input-event"/>
-                  <input type="submit" class="input-event"> 
-                </form> 
-                
-            <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                  <div class="modal-header border-0">
-                    <p class="modal-title mt-2 ml-2 modal-title dark-blue-font">QUAL ROLÊ?</p>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="ml-1 mb-1 form-check check-style">
-                    <input class="form-check-input position-static" type="checkbox" id="checkBar" value="option1" aria-label="...">
-                    <label class="font-style bg-transparent font-weight-bold align-middle" for="checkBar">BARES</label>
-                  </div>
-                  <div class="ml-1 mb-1 form-check check-style">
-                    <input class="form-check-input position-static" type="checkbox" id="checkShow" value="option1" aria-label="...">
-                    <label class="font-style bg-transparent font-weight-bold align-middle" for="checkShow">SHOWS</label>
-                  </div>
-                  <div class="ml-1 mb-1 form-check check-style">
-                    <input class="form-check-input position-static" type="checkbox" id="checkFest" value="option1" aria-label="...">
-                    <label class="font-style bg-transparent font-weight-bold align-middle" for="checkFest">FESTIVAIS</label>
-                  </div>
-                  <div class="ml-1 mb-1 form-check check-style">
-                    <input class="form-check-input position-static" type="checkbox" id="checkCult" value="option1" aria-label="...">
-                    <label class="font-style bg-transparent font-weight-bold align-middle" for="checkCult">CULTURAIS</label>
-                  </div>
-                  <div class="ml-1 mb-1 form-check check-style">
-                    <input class="form-check-input position-static" type="checkbox" id="checkGast" value="option1" aria-label="...">
-                    <label class="font-style bg-transparent font-weight-bold align-middle" for="checkGast">GASTRONÔMICOS</label>
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <button type="button" class="mr-1 mb-3 col-2 btn dark-blue-font"><strong>></strong></button>
-                  </div>
+            <div class="modal-content-event">
+              <span id="close" class="close">&times;</span>
+              <form id="createEvent" class="signup">
+                <input type="text" placeholder="Nome do Evento" id="event" class="input-event" />
+                <input type="text" placeholder="Categoria" id="category" class="input-event" />
+                <input type="text" placeholder="Data" id="date" class="input-event" />
+                <input type="text" placeholder="Local" id="local" class="input-event" />
+                <input type="text" placeholder="Endereço" id="address" class="input-event" />
+                <input type="text" placeholder="Preço" id="price" class="input-event" />
+                <input type="text" placeholder="Descrição" id="description" class="input-event" />
+                <input type="submit" class="input-event">
+              </form>
+
+              <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog"
+                aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header border-0">
+                      <p class="modal-title mt-2 ml-2 modal-title dark-blue-font">QUAL ROLÊ?</p>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="ml-1 mb-1 form-check check-style">
+                      <input class="form-check-input position-static" type="checkbox" id="checkBar" value="option1"
+                        aria-label="...">
+                      <label class="font-style bg-transparent font-weight-bold align-middle"
+                        for="checkBar">BARES</label>
+                    </div>
+                    <div class="ml-1 mb-1 form-check check-style">
+                      <input class="form-check-input position-static" type="checkbox" id="checkShow" value="option1"
+                        aria-label="...">
+                      <label class="font-style bg-transparent font-weight-bold align-middle"
+                        for="checkShow">SHOWS</label>
+                    </div>
+                    <div class="ml-1 mb-1 form-check check-style">
+                      <input class="form-check-input position-static" type="checkbox" id="checkFest" value="option1"
+                        aria-label="...">
+                      <label class="font-style bg-transparent font-weight-bold align-middle"
+                        for="checkFest">FESTIVAIS</label>
+                    </div>
+                    <div class="ml-1 mb-1 form-check check-style">
+                      <input class="form-check-input position-static" type="checkbox" id="checkCult" value="option1"
+                        aria-label="...">
+                      <label class="font-style bg-transparent font-weight-bold align-middle"
+                        for="checkCult">CULTURAIS</label>
+                    </div>
+                    <div class="ml-1 mb-1 form-check check-style">
+                      <input class="form-check-input position-static" type="checkbox" id="checkGast" value="option1"
+                        aria-label="...">
+                      <label class="font-style bg-transparent font-weight-bold align-middle"
+                        for="checkGast">GASTRONÔMICOS</label>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <button type="button" class="mr-1 mb-3 col-2 btn dark-blue-font"><strong>></strong></button>
+                    </div>
                   </div>
 
+                </div>
               </div>
-            </div>
-          <!-- <li class="nav-item active">
+              <!-- <li class="nav-item active">
             <a id="home-navbar" class="nav-link" href="#"></a>
           </li> -->
         </ul>
@@ -132,7 +144,7 @@
       </div>
     </nav>
   </header>
-  <main>      
+  <main>
     <div class="container-fluid gedf-wrapper">
       <div class="row">
         <div class="col-md-3">
@@ -213,63 +225,122 @@
           </section>
 
           <!-- Card destaques -->
+          <h1 class="card-title">Rolês de hoje</h1>
+          <h2 class="card-subtitle">Destaques</h2>
           <div class="card mb-3">
-            <img class="card-img-top" src="http://www.teatrosergiocardoso.org.br/wp-content/uploads/2019/02/730-Leekyung-Kim.jpg" alt="Imagem de capa do card">
+            <img class="card-img-top"
+              src="http://www.teatrosergiocardoso.org.br/wp-content/uploads/2019/02/730-Leekyung-Kim.jpg"
+              alt="Imagem de capa do card">
             <div class="card-body">
               <h5 class="card-title">Van Gogh por Gauguin</h5>
-              <p class="card-text">Montagem protagonizada por Alex Morenno e Augusto Zacchi estreia no dia 22 de abril, no Teatro Sérgio Cardoso.</p>
-              <p class="card-text"><small class="text-muted">Teatro Sérgio Cardoso, Bela Vista  22 Abr-10 Jun</small></p>
-              <a href="#" class="btn btn-primary">Visitar</a>
+              <p class="card-text">Montagem protagonizada por Alex Morenno e Augusto Zacchi estreia no dia 22 de abril,
+                no Teatro Sérgio Cardoso.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="./map.html" class="btn btn-outline-primary">Visitar</a>
+                  <a href="#" class="btn btn-outline-primary">Editar</a>
+                </div>
+                <p class="card-text"><small class="text-muted">9 minutos</small>
+                </p>
+              </div>
+
             </div>
           </div>
 
           <div class="card mb-3">
-            <img class="card-img-top" src="https://abrilveja.files.wordpress.com/2018/11/3f0a8967.jpg?quality=70&strip=info&w=1024&h=683" alt="Imagem de capa do card">
+            <img class="card-img-top"
+              src="https://abrilveja.files.wordpress.com/2018/11/3f0a8967.jpg?quality=70&strip=info&w=1024&h=683"
+              alt="Imagem de capa do card">
             <div class="card-body">
               <h5 class="card-title">Quadrinhos no MIS</h5>
-              <p class="card-text">Revistas, artes originais e itens raros fazem parte da mostra que inaugura em novembro.</p>
-              <p class="card-text"><small class="text-muted">MIS - Museu da Imagem e do Som, Jardim Europa  14 Nov 2018-26 Mai</small></p>
-              <a href="#" class="btn btn-primary">Visitar</a>
+              <p class="card-text">Revistas, artes originais e itens raros fazem parte da mostra que inaugura em
+                novembro.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="./map.html" class="btn btn-outline-primary">Visitar</a>
+                  <a href="#" class="btn btn-outline-primary">Editar</a>
+                </div>
+                <p class="card-text"><small class="text-muted">9 minutos</small>
+                </p>
+              </div>
             </div>
           </div>
 
           <!-- Cards comuns -->
+          <h2 class="card-subtitle">Outros</h2>
           <div class="card-deck">
             <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="https://observatoriodatelevisao.bol.uol.com.br/wp-content/uploads/2017/09/hebe.jpg" alt="Imagem de capa do card">
+              <img class="card-img-top"
+                src="https://www.portalr3.com.br/wp-content/uploads/2019/03/20190327-tarsila_morro_da_favela.jpg"
+                alt="Imagem de capa do card">
               <div class="card-body">
-                <h5 class="card-title">Hebe Eterna</h5>
-                <p class="card-text">Exposição apresenta a história pessoal e trajetória profissional de Hebe Camargo.</p>
-                <a href="#" class="btn btn-primary">Visitar</a>
+                <h5 class="card-title">Tarsila Popular</h5>
+                <p class="card-text">O MASP recebe a maior exposição dedicada à Tarsila do Amaral com 92 obras.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="./map.html" class="btn btn-outline-primary">Visitar</a>
+                    <a href="#" class="btn btn-outline-primary">Editar</a>
+                  </div>
+                  <p class="card-text"><small class="text-muted">9 minutos</small>
+                  </p>
+                </div>
               </div>
             </div>
 
             <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="http://www.infoartsp.com.br/imgs/c5b3555d92.jpg" alt="Imagem de capa do card">
+              <img class="card-img-top"
+                src="https://observatoriodatelevisao.bol.uol.com.br/wp-content/uploads/2017/09/hebe.jpg"
+                alt="Imagem de capa do card">
               <div class="card-body">
-                <h5 class="card-title">Djanira: a memória de seu povo</h5>
-                <p class="card-text">Mostra reúne trabalhos da artista brasileira Djanira da Motta e Silva.</p>
-                <a href="#" class="btn btn-primary">Visitar</a>
+                <h5 class="card-title">Hebe Eterna</h5>
+                <p class="card-text">Exposição apresenta a história pessoal e trajetória profissional de Hebe Camargo.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="./map.html" class="btn btn-outline-primary">Visitar</a>
+                    <a href="#" class="btn btn-outline-primary">Editar</a>
+                  </div>
+                  <p class="card-text"><small class="text-muted">9 minutos</small>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <br>
           <div class="card-deck">
             <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="https://teatrofolha.com.br/wp-content/uploads/2019/05/Banner-Mobile-O-Pequeno-Principe.png" alt="Imagem de capa do card">
+              <img class="card-img-top"
+                src="https://teatrofolha.com.br/wp-content/uploads/2019/05/Banner-Mobile-O-Pequeno-Principe.png"
+                alt="Imagem de capa do card">
               <div class="card-body">
                 <h5 class="card-title">O Pequeno Príncipe</h5>
-                <p class="card-text">Montagem mistura presença de atores com bonecos e utiliza técnica de teatro com luz negra para encantar crianças e adultos.</p>
-                <a href="#" class="btn btn-primary">Visitar</a>
+                <p class="card-text">Montagem mistura presença de atores com bonecos e utiliza técnica de teatro com luz
+                  negra para encantar crianças e adultos.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="./map.html" class="btn btn-outline-primary">Visitar</a>
+                    <a href="#" class="btn btn-outline-primary">Editar</a>
+                  </div>
+                  <p class="card-text"><small class="text-muted">9 minutos</small>
+                  </p>
+                </div>
               </div>
             </div>
 
             <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="https://www.portalr3.com.br/wp-content/uploads/2019/03/20190327-tarsila_morro_da_favela.jpg" alt="Imagem de capa do card">
+              <img class="card-img-top" src="http://www.infoartsp.com.br/imgs/c5b3555d92.jpg"
+                alt="Imagem de capa do card">
               <div class="card-body">
-                <h5 class="card-title">Tarsila Popular</h5>
-                <p class="card-text">O MASP recebe a maior exposição dedicada à Tarsila do Amaral com 92 obras.</p>
-                <a href="#" class="btn btn-primary">Visitar</a>
+                <h5 class="card-title">Djanira: a memória de seu povo</h5>
+                <p class="card-text">Mostra reúne trabalhos da artista brasileira Djanira da Motta e Silva.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="./map.html" class="btn btn-outline-primary">Visitar</a>
+                    <a href="#" class="btn btn-outline-primary">Editar</a>
+                  </div>
+                  <p class="card-text"><small class="text-muted">9 minutos</small>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -309,7 +380,7 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="src/js/config.js"></script>
   <script src="/src/js/eventData.js"></script>
-  <script src="/src/js/creatEvent.js"></script>  
+  <script src="/src/js/creatEvent.js"></script>
   <!-- <script src="src/js/publica.js"></script> -->
   <script src="src/js/login.js"></script>
 </body>
