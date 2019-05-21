@@ -1,17 +1,17 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyB2vafCQak6cgirrOTC7ZdGseH4AOtKHlY",
-  authDomain: "qualrole-650be.firebaseapp.com",
-  databaseURL: "https://qualrole-650be.firebaseio.com",
-  projectId: "qualrole-650be",
-  storageBucket: "qualrole-650be.appspot.com",
-  messagingSenderId: "513974818431",
-  appId: "1:513974818431:web:ed21ab217cf71352"
+  apiKey: "AIzaSyD9LTH02XKh1CshINKNqXN8Ve2Y33F9uVA",
+  authDomain: "qualrole-2305.firebaseapp.com",
+  databaseURL: "https://qualrole-2305.firebaseio.com",
+  projectId: "qualrole-2305",
+  storageBucket: "qualrole-2305.appspot.com",
+  messagingSenderId: "842685281158",
+  appId: "1:842685281158:web:4f3ce890c3f5a456"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 //inicializa cloudStorage
- const db = firebase.firestore();
+const db = firebase.firestore();
  //inicializa auth
- const auth = firebase.auth();
+const auth = firebase.auth();
 
