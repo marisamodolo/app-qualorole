@@ -1,54 +1,56 @@
-navigator.geolocation.getCurrentPosition(geoSuccess);
+window.onload = function() {
+  let startPos;
+  let geoSuccess = function(position) {
+    startPos = position;
+    const lat = startPos.coords.latitude;
+    const lng = startPos.coords.longitude;
+    console.log(lat, lng);
+  };
+  navigator.geolocation.getCurrentPosition(geoSuccess);
+};
 
-function geoSuccess(position) {
-  // Do magic with location
-  const lat = position.coords.latitude;
-  const long = position.coords.longitude;
-
-
-  // Instantiate a map and platform object:
   var platform = new H.service.Platform({
     'app_id': 'Ck3iVHbjZd1pETqoPFXs',
-    'app_code': 'Lw82eSEqhWwTZDO6BsOTqA'
+    'app_code': 'Lw82eSEqhWwTZDO6BsOTqA',
+    useCIT: true,
+    useHTTPS: true
   });
-  // Retrieve the target element for the map:
-  var targetElement = document.getElementById('mapContainer');
 
-  // Get the default map types from the platform object:
   var defaultLayers = platform.createDefaultLayers();
 
-  // Instantiate the map:
   var map = new H.Map(
     document.getElementById('mapContainer'),
     defaultLayers.normal.map,
     {
-      zoom: 10,
-      center: { lat: 52.51,
-lng: 13.4 }
-    });
+      center: {
+        lat: -23.5489,
+        lng: -46.6388
+      },
+      zoom: 11
+    })
 
-  // Create the parameters for the routing request:
+  // var targetElement = document.getElementById('mapContainer');
+
+  var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+  var ui = H.ui.UI.createDefault(map, defaultLayers, 'pt-BR');
+
   var routingParameters = {
-  // The routing mode:
     'mode': 'fastest;car',
-    // The start point of the route:
-    'waypoint0': `geo!${lat},${long}`,
-    // The end point of the route:
-    'waypoint1': `geo!${lat},${long}`,
-    // To retrieve the shape of the route we choose the route
-    // representation mode 'display'
+    'waypoint0': `geo!${lat},${lng}`,//esta linha dá erro falando que lat não está definida
+    'waypoint1': `geo!${lat},${lng}`,
     'representation': 'display'
   };
 
   // Define a callback function to process the routing response:
-  var onResult = function(result) {
+  var onResult = function (result) {
     var route,
       routeShape,
       startPoint,
       endPoint,
       linestring;
     if (result.response.route) {
-    // Pick the first route from the response:
+      // Pick the first route from the response:
       route = result.response.route[0];
       // Pick the route's shape:
       routeShape = route.shape;
@@ -57,7 +59,7 @@ lng: 13.4 }
       linestring = new H.geo.LineString();
 
       // Push all the points in the shape into the linestring:
-      routeShape.forEach(function(point) {
+      routeShape.forEach(function (point) {
         var parts = point.split(',');
         linestring.pushLatLngAlt(parts[0], parts[1]);
       });
@@ -68,8 +70,10 @@ lng: 13.4 }
 
       // Create a polyline to display the route:
       var routeLine = new H.map.Polyline(linestring, {
-        style: { strokeColor: 'blue',
-lineWidth: 10 }
+        style: {
+          strokeColor: 'blue',
+          lineWidth: 10
+        }
       });
 
       // Create a marker for the start point:
@@ -99,10 +103,6 @@ lineWidth: 10 }
   // the callback and an error callback function (called if a
   // communication error occurs):
   router.calculateRoute(routingParameters, onResult,
-    function(error) {
+    function (error) {
       alert(error.message);
     });
-
-
-  console.log(lat, long);
-}
