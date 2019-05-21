@@ -39,6 +39,8 @@ $(document).ready(function () {
     }
   });
 
+  $('#button-logout').click(logout);
+
   function messagePost(date, message, user, visibility, key, likes) {
     $('#posts-container').append(`
         <div class="card gedf-card marg" data-div="${key}" data-filter="${visibility}">

@@ -9,7 +9,10 @@ createEvent.addEventListener('submit', (e) => {
         categoria: createEvent['category'].value ,
         ingresso: createEvent['price'].value,
         endereço: createEvent['address'].value,
-        descricao: createEvent['description'].value
+        descricao: createEvent['description'].value,
+        iniciar: "todos",
+        importancia: "destaque",
+        foto: createEvent['photo'].value
 
     }).then(()=>{
         modalOne.style.display = "none"

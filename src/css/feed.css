@@ -11,6 +11,11 @@
     color: pink;
 }
 
+.btn-off {
+    width: 2rem;
+    margin: 20px;
+}
+
 .check-style input{
     display: none;
 }
