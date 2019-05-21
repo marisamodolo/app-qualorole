@@ -32,15 +32,15 @@ $(document).ready(function () {
     let newUserConfirmPass = $('#confirm-password').val();
 
     if (password === newUserConfirmPass) {
-      firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(function (response) {
-          let userId = response.user.uid;
-          firebase.database().ref("users/" + userId).set({
+        auth.createUserWithEmailAndPassword(email, password)
+        .then(function (cred) {
+          let userId = cred.user.uid;
+          db.collection('user').doc(userId).set({
             name: newUserName,
             email: email,
             
           }).then(function () {
-            window.location = 'presentation.html?id=' + userId;
+            window.location = 'feed.html?id=' + userId;
           })
         })
         .catch(function (error) {
@@ -63,9 +63,10 @@ $(document).ready(function () {
     let email = $('#login-email').val();
     let password = $('#login-password').val();
 
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then(function (response) {
-        window.location = 'presentation.html?id=' + userId;
+      auth.signInWithEmailAndPassword(email, password)
+      .then(function (cred) {
+        let userId = cred.user.uid;
+        window.location = 'feed.html?id=' + userId;
       })
       .catch(function (error) {
         let errorMessage = error.message;
@@ -104,7 +105,7 @@ $(document).ready(function () {
       .then(function (result) {
         let token = result.credential.accessToken;
         let user = result.user;
-        window.location = 'presentation.html?id=' + user;
+        window.location = 'feed.html?id=' + user.uid;
       }).catch(function (error) {
         bootbox.alert('Falha na autenticação');
       });
@@ -115,7 +116,7 @@ $(document).ready(function () {
     firebase.auth()
       .signOut()
       .then(function () {
-        window.location = index.html;
+        window.location = 'index.html?id=' + user;
       })
   }
 
