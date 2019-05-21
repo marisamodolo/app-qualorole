@@ -23,32 +23,18 @@
 </head>
 
 <body class="body">
+  <!-- Navbar start -->
   <header class="header">
     <nav class="df justify-content-end navbar navbar-expand-lg navbar-dark bg-purple">
-      <a id="logo-navbar" class="navbar-brand" href="#"><img src="src/img/logo-qual-role.svg"
-          class='style-logo-feed'></a>
-      <button class="navbar-toggler brand-size" type="button" data-toggle="collapse"
-        data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false"
-        aria-label="Alterna navegação">
+      <a id="logo-navbar" class="navbar-brand" href="#"><img src="src/img/logo-qual-role.svg" class='style-logo-feed'></a>
+      <button class="navbar-toggler brand-size" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="justify-content-end collapse navbar-collapse" id="conteudoNavbarSuportado">
         <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbar-dropdown">
-              <a class="dropdown-item" id="option-profile" href="#">Destaques</a>
-              <a class="dropdown-item" href="#">Agenda</a>
-              <a class="dropdown-item" href="#">Perfil</a>
-              <div class="dropdown-divider"></div>
-              <a class="btn-close dropdown-item" href="#" id="button-logout">Sair</a>
-            </div>
-          </li>
-          <li class="nav-item"> <a href="#" id="profile-pic-nav"><img id="profile-pic-navbar"
-                class="rounded-circle pic-navbar"></a></li>
+          <li class="nav-item"> <a href="#" id="profile-pic-nav"><img id="profile-pic-navbar" class="rounded-circle pic-navbar"></a></li>
+          <li class="nav-item active">
+          <li class="nav-item"> <a href="#" id="profile-pic-nav"><img id="profile-pic-navbar" class="rounded-circle pic-navbar"></a></li>
           <li class="nav-item active">
             <input id="home" type=image src="src/img/icon-home.svg" href="feed.html" class="btn-nav">
           </li>
@@ -58,87 +44,86 @@
           <li class="nav-item active">
             <input id="eventModal" data-toggle="modal" type=image data-target=".myModal" src="src/img/icon-add.svg" href="#" class="btn-nav">
           </li>
-          <div class="modal fade myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-              <div class="modal-content">
-                <div class="modal-header border-0">
-                  <p class="modal-title mt-2 ml-2 modal-title dark-blue-font">QUAL ROLÊ?</p>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <form id="createEvent" class="signup">                    
-                  <input type="text" placeholder="Nome do Evento" id="event" class="input-event"/>
-                  <input type="text" placeholder="Data" id="date" class="input-event"/>
-                  <input type="text" placeholder="Local" id="local" class="input-event"/>
-                  <input type="text" placeholder="Endereço" id="address" class="input-event"/>
-                  <input type="text" placeholder="Preço" id="price" class="input-event"/>
-                  <input type="text" placeholder="Descrição" id="description" class="input-event"/>
-                  <input type="text" placeholder="URL Foto" id="photo" class="input-event"/>
-                  <select id="category" class="input-event"> 
-                    <option value="bares">Bares</option>
-                    <option value="shows">Shows</option>
-                    <option value="festivais">Festivais</option>
-                    <option value="culturais">Culturais</option>
-                    <option value="gastronomicos">Gastronômicos</option>
-                  </select>
-                  <input type="submit" class="input-event"> 
-                </form> 
-                </div>
-            </div>
-          </div>
-          <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-              <div class="modal-content">
-                <div class="modal-header border-0">
-                  <p class="modal-title mt-2 ml-2 modal-title dark-blue-font">QUAL ROLÊ?</p>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="ml-1 mb-1 form-check check-style">
-                  <input class="form-check-input position-static" name="filter-check" type="checkbox" id="bares" value="option1" aria-label="...">
-                  <label class="font-style bg-transparent font-weight-bold align-middle" for="bares">BARES</label>
-                </div>
-                <div class="ml-1 mb-1 form-check check-style">
-                  <input class="form-check-input position-static" name="filter-check" type="checkbox" id="shows" value="option1" aria-label="...">
-                  <label class="font-style bg-transparent font-weight-bold align-middle" for="shows">SHOWS</label>
-                </div>
-                <div class="ml-1 mb-1 form-check check-style">
-                  <input class="form-check-input position-static" name="filter-check" type="checkbox" id="festivais" value="option1" aria-label="...">
-                  <label class="font-style bg-transparent font-weight-bold align-middle" for="festivais">FESTIVAIS</label>
-                </div>
-                <div class="ml-1 mb-1 form-check check-style">
-                  <input class="form-check-input position-static" name="filter-check" type="checkbox" id="culturais" value="option1" aria-label="...">
-                  <label class="font-style bg-transparent font-weight-bold align-middle" for="culturais">CULTURAIS</label>
-                </div>
-                <div class="ml-1 mb-1 form-check check-style">
-                  <input class="form-check-input position-static" name="filter-check" type="checkbox" id="gastronomicos" value="option1" aria-label="...">
-                  <label class="font-style bg-transparent font-weight-bold align-middle" for="gastronomicos">GASTRONÔMICOS</label>
-                </div>
-                <div class="d-flex justify-content-end">
-                  <button type="button" id="filter" class="mr-1 mb-3 col-2 btn dark-blue-font"><strong>></strong></button>
-                </div>
-                </div>
-            </div>
-          </div>
-          <!-- <li class="nav-item active">
-            <a id="home-navbar" class="nav-link" href="#"></a>
-          </li> -->
+          <li class="nav-item active">
+            <input id="button-logout" data-toggle="modal" type=image src="src/img/icon-sair.svg" href="#" class="btn-off">
+          </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <div class="hidden" id="input-search">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-          </div>
-          <button class="btn-feed my-2 my-sm-0 btn-search btn-circle" id="btn-search" type="submit"><i
-              class="fas fa-search"></i></button>
-        </form>
       </div>
     </nav>
   </header>
+  <!-- Navbar finish -->
+
+  <!-- Modal create event start -->
+  <div class="modal fade myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <form id="createEvent" class="signup">                    
+          <input type="text" placeholder="Nome do Evento" id="event" class="input-event"/>
+          <input type="text" placeholder="Data" id="date" class="input-event"/>
+          <input type="text" placeholder="Local" id="local" class="input-event"/>
+          <input type="text" placeholder="Endereço" id="address" class="input-event"/>
+          <input type="text" placeholder="Preço" id="price" class="input-event"/>
+          <input type="text" placeholder="Descrição" id="description" class="input-event"/>
+          <input type="text" placeholder="URL Foto" id="photo" class="input-event"/>
+          <select id="category" class="input-event"> 
+            <option value="bares">Bares</option>
+            <option value="shows">Shows</option>
+            <option value="festivais">Festivais</option>
+            <option value="culturais">Culturais</option>
+            <option value="gastronomicos">Gastronômicos</option>
+          </select>
+          <input type="submit" class="input-event"> 
+        </form> 
+      </div>
+    </div>
+  </div>
+  <!-- Modal create event finish -->
+
+  <!-- Modal filter start -->
+  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <p class="modal-title mt-2 ml-2 modal-title dark-blue-font">QUAL ROLÊ?</p>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="ml-1 mb-1 form-check check-style">
+          <input class="form-check-input position-static" name="filter-check" type="checkbox" id="bares" value="option1" aria-label="...">
+          <label class="font-style bg-transparent font-weight-bold align-middle" for="bares">BARES</label>
+        </div>
+        <div class="ml-1 mb-1 form-check check-style">
+          <input class="form-check-input position-static" name="filter-check" type="checkbox" id="shows" value="option1" aria-label="...">
+          <label class="font-style bg-transparent font-weight-bold align-middle" for="shows">SHOWS</label>
+        </div>
+        <div class="ml-1 mb-1 form-check check-style">
+          <input class="form-check-input position-static" name="filter-check" type="checkbox" id="festivais" value="option1" aria-label="...">
+          <label class="font-style bg-transparent font-weight-bold align-middle" for="festivais">FESTIVAIS</label>
+        </div>
+        <div class="ml-1 mb-1 form-check check-style">
+          <input class="form-check-input position-static" name="filter-check" type="checkbox" id="culturais" value="option1" aria-label="...">
+          <label class="font-style bg-transparent font-weight-bold align-middle" for="culturais">CULTURAIS</label>
+        </div>
+        <div class="ml-1 mb-1 form-check check-style">
+          <input class="form-check-input position-static" name="filter-check" type="checkbox" id="gastronomicos" value="option1" aria-label="...">
+          <label class="font-style bg-transparent font-weight-bold align-middle" for="gastronomicos">GASTRONÔMICOS</label>
+        </div>
+        <div class="d-flex justify-content-end">
+          <button type="button" id="filter" class="mr-1 mb-3 col-2 btn dark-blue-font"><strong>></strong></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal filter finish -->
+  
   <main>
+
+  <!-- Create aside start -->  
     <div class="container-fluid gedf-wrapper">
       <div class="row">
+
+  <!-- Card destaques start -->
         <div class="col-md-3">
           <div class="card" id="card-left">
             <div class="card-body">
@@ -148,17 +133,12 @@
             </div>
           </div>
         </div>
+  <!-- Card destaques finish -->
+
+  <!-- Card foruns start -->
         <div class="col-md-6 gedf-main">
-
-          <div class="row justify-content-center container-button-textbox"><button id="btn-show-textbox"
-              class="btn btn-circle btn-xl row justify-content-center align-items-center"><i
-                class="fas fa-plus"></i></button></div>
-
-        <!-- Card destaques -->
-        <div id="cardSpot"></div>
-        <div id="cardCommon"></div>
-
-
+          <div id="cardSpot"></div>
+          <div id="cardCommon"></div>
         </div>
         <div class="col-md-3 ">
           <div class="card gedf-card">
@@ -172,21 +152,14 @@
                 <img src="images/img-artes.svg" alt="Ícone Matéria Artes" class="icons-card">
                 <img src="images/img-quimica.svg" alt="Ícone Matéria Química" class="icons-card">
               </section>
-              <a href="#" class="card-link card-foruns">Anotações</a>
-            </div>
-          </div>
-          <div class="card gedf-card">
-            <div class="card-body">
-              <h5 class="card-title">Enem</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Dicas de como se preparar</h6>
-              <p class="card-text">Tudo o que você precisa para se dar bem no Enem.</p>
-              <a href="#" class="color-text card-link">Aulas Extras</a>
-              <a href="#" class="color-text card-link">Biblioteca Virtual</a>
             </div>
           </div>
         </div>
+  <!-- Card foruns finish -->
+
       </div>
     </div>
+  <!-- Create aside finish --> 
   </main>
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"
