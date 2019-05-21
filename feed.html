@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="/src/css/modal.css">
   <link rel="stylesheet" type="text/css" media="screen" href="src/css/main.css">
   <link rel="stylesheet" type="text/css" media="screen" href="src/css/feed.css">    
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
@@ -63,8 +64,24 @@
             <input type=image src="src/img/icon-filter.svg" href="#" class="btn-nav">
           </li>
           <li class="nav-item active">
-            <input type=image src="src/img/icon-add.svg" href="#" class="btn-nav">
+            <input id="eventModal" type=image src="src/img/icon-add.svg" href="#" class="btn-nav">
           </li>
+          <!-- Modal que pega detalhes dos eventos -->
+          <div id="myModal" class="modal">
+              <div class="modal-content-event">
+                <span id="close" class="close">&times;</span>
+                <form id="createEvent" class="signup">                    
+                  <input type="text" placeholder="Nome do Evento" id="event" class="input-event"/>
+                  <input type="text" placeholder="Categoria" id="category" class="input-event"/>
+                  <input type="text" placeholder="Data" id="date" class="input-event"/>
+                  <input type="text" placeholder="Local" id="local" class="input-event"/>
+                  <input type="text" placeholder="Endereço" id="address" class="input-event"/>
+                  <input type="text" placeholder="Preço" id="price" class="input-event"/>
+                  <input type="text" placeholder="Descrição" id="description" class="input-event"/>
+                  <input type="submit" class="input-event"> 
+                </form> 
+              </div>
+            </div>
           <!-- <li class="nav-item active">
             <a id="home-navbar" class="nav-link" href="#"></a>
           </li> -->
@@ -79,7 +96,7 @@
       </div>
     </nav>
   </header>
-  <main>
+  <main>      
     <div class="container-fluid gedf-wrapper">
       <div class="row">
         <div class="col-md-3">
@@ -242,10 +259,10 @@
               <h6 class="card-subtitle mb-2 text-muted"></h6>
               <p class="card-text"></p>
               <section>
-                <img src="images/img-fisica.svg" alt="Ícone Matéria Física" class="icons-card">
+                <!-- <img src="images/img-fisica.svg" alt="Ícone Matéria Física" class="icons-card">
                 <img src="images/img-biologia.svg" alt="Ícone Matéria Biologia" class="icons-card">
                 <img src="images/img-artes.svg" alt="Ícone Matéria Artes" class="icons-card">
-                <img src="images/img-quimica.svg" alt="Ícone Matéria Química" class="icons-card">
+                <img src="images/img-quimica.svg" alt="Ícone Matéria Química" class="icons-card"> -->
               </section>
               <a href="#" class="card-link card-foruns">Anotações</a>
             </div>
@@ -267,7 +284,9 @@
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="src/js/config.js"></script>
-  <script src="src/js/publica.js"></script>
+  <script src="/src/js/eventData.js"></script>
+  <script src="/src/js/creatEvent.js"></script>  
+  <!-- <script src="src/js/publica.js"></script> -->
   <script src="src/js/login.js"></script>
 </body>
 
