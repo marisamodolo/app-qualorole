@@ -21,36 +21,16 @@ function createPost(event, category, filter){
       <section class="card mb-3">
         <img class="card-img-top" src="${info.foto}" alt="Imagem de capa do card">
         <section class="card-body">
-          <h5 class="card-title">${info.evento}</h5>
-          <p class="card-text">${info.descrição}</p>
-          <p class="card-text"><small class="text-muted">${info.endereço}</small></p>
-          <a href="#" id-info=${idPost} class="btn btn-primary">Visitar</a>
+          <h5 class="card-title name-evt">${info.evento}</h5>
+          <p class="card-text text">${info.descricao}</p>
+          <p class="card-text text"><small class="text-muted">${info.endereço}</small></p>
+          <a href="#" id-info=${idPost} class="btn btn-primary text">Ir pro rolê</a>
         </section>
       </section>
       `)
     })
   })
 
-  event
-  .where("importancia", "==", "comum")
-  .where(category, "==", filter)
-  .get()
-  .then(function(querySnapshot) {
-    querySnapshot.forEach(function(doc) {
-      const info = doc.data();
-      const idPost = doc.id;
-      $("#cardCommon").prepend(`
-      <section class="card" style="width: 18rem;">
-        <img class="card-img-top" src="${info.foto}" alt="Imagem de capa do card">
-        <section class="card-body">
-          <h5 class="card-title">${info.evento}</h5>
-          <p class="card-text">${info.descrição}</p>
-          <a href="#" id-info=${idPost} class="btn btn-primary">Visitar</a>
-        </section>
-      </section>
-      `)
-    })
-  })
 }
 
 function filterSelect(){
@@ -67,7 +47,9 @@ function undoFilter(){
 }
 
 $(document).ready(function () {
-  $('#button-logout').click(function() {
-      window.location = `index.html?id=${USER_ID}`;
+  console.log("anajd")
+  $('.button-logout').click(function() {
+    console.log("vabab")
+      window.location = `index.html`;
   })
 })
