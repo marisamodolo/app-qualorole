@@ -68,3 +68,53 @@
 .check-style input:checked + label::after {
     background-color: #d64161;
 }
+
+.modal-event {
+    font-family: Roboto;
+    text-align: center;
+    padding: 2rem;
+    width: 150px;
+    height: auto;
+}
+
+.btn-event {
+    width: 2.7rem;
+    color: white;
+    background-color: #3BCDE2;
+    border: none;
+    margin-top: 0.5rem;
+}
+
+.input-event {
+    width: 10rem;
+    margin-top: 0.5rem;
+}
+
+.h5 {
+    font-family: Roboto;
+    color: #5862AB;    
+}
+
+.h7 {
+    font-family: Roboto;
+}
+
+.date-time {
+    font-family: Roboto;
+    font-size: 0.8rem;
+    color: #FF5F99;
+    margin: 0;
+}
+
+.name-evt {
+    font-family: Roboto;
+    font-size: 1.5rem;
+    color: #5862AB;
+    margin:0;
+}
+
+.local {
+    font-family: Roboto;
+    font-size: 0.8rem;
+    color: #96989A;
+}

@@ -65,3 +65,9 @@ function filterSelect(){
 function undoFilter(){
   createPost(collectionEvent, "iniciar", "todos")
 }
+
+$(document).ready(function () {
+  $('#button-logout').click(function() {
+      window.location = `index.html?id=${USER_ID}`;
+  })
+})

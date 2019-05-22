@@ -24,7 +24,7 @@ function geoSuccess(position) {
     {
       zoom: 10,
       center: { lat: 52.51,
-lng: 13.4 }
+      lng: 13.4 }
     });
 
   // Create the parameters for the routing request:
@@ -69,7 +69,7 @@ lng: 13.4 }
       // Create a polyline to display the route:
       var routeLine = new H.map.Polyline(linestring, {
         style: { strokeColor: 'blue',
-lineWidth: 10 }
+        lineWidth: 10 }
       });
 
       // Create a marker for the start point:

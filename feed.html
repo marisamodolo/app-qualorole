@@ -45,7 +45,7 @@
             <input id="eventModal" data-toggle="modal" type=image data-target=".myModal" src="src/img/icon-add.svg" href="#" class="btn-nav">
           </li>
           <li class="nav-item active">
-            <input id="button-logout" data-toggle="modal" type=image src="src/img/icon-sair.svg" href="#" class="btn-off">
+            <a href="javascript:window.close()"><img src="src/img/icon-sair.svg" class="btn-off"></a>
           </li>
         </ul>
       </div>
@@ -56,23 +56,23 @@
   <!-- Modal create event start -->
   <div class="modal fade myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm">
-      <div class="modal-content">
+      <div class="modal-content modal-event">
         <form id="createEvent" class="signup">                    
           <input type="text" placeholder="Nome do Evento" id="event" class="input-event"/>
-          <input type="text" placeholder="Data" id="date" class="input-event"/>
+          <input type="date" placeholder="Data" id="date" class="input-event"/>
           <input type="text" placeholder="Local" id="local" class="input-event"/>
           <input type="text" placeholder="Endereço" id="address" class="input-event"/>
           <input type="text" placeholder="Preço" id="price" class="input-event"/>
           <input type="text" placeholder="Descrição" id="description" class="input-event"/>
           <input type="text" placeholder="URL Foto" id="photo" class="input-event"/>
           <select id="category" class="input-event"> 
-            <option value="bares">Bares</option>
-            <option value="shows">Shows</option>
-            <option value="festivais">Festivais</option>
-            <option value="culturais">Culturais</option>
+            <option value="bares">Bares</option><br>
+            <option value="shows">Shows</option><br>
+            <option value="festivais">Festivais</option><br>
+            <option value="culturais">Culturais</option><br>
             <option value="gastronomicos">Gastronômicos</option>
           </select>
-          <input type="submit" class="input-event"> 
+          <input type="submit" class="input-event btn-event"> 
         </form> 
       </div>
     </div>
@@ -110,7 +110,7 @@
           <label class="font-style bg-transparent font-weight-bold align-middle" for="gastronomicos">GASTRONÔMICOS</label>
         </div>
         <div class="d-flex justify-content-end">
-          <button type="button" id="filter" class="mr-1 mb-3 col-2 btn dark-blue-font"><strong>></strong></button>
+          <button type="button" id="filter" class="mr-1 mb-3 col-2 btn dark-blue-font fas fa-angle-right"><strong></strong></button>
         </div>
       </div>
     </div>
@@ -125,25 +125,44 @@
 
   <!-- Card destaques start -->
         <div class="col-md-3">
-          <div class="card" id="card-left">
+          <div class="card " id="card-left">
             <div class="card-body">
               <div class="h5">Destaques da semana</div>
-              <div class="h7 text-muted">Veja os principais eventos da semana:</div>
-              <img src="" alt="">
+              <div class="h7 text-muted">Veja os principais eventos da semana:</div><br>
+              <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="src/img/bts-card.jpg" alt="Banda BTS">
+                  <div class="card-body">
+                    <p class="card-text date-time">sáb, 25 de maio, 19:00</p>
+                    <p class="card-text local">Allianz Parque</p>
+                    <a href="https://www.eventim.com.br/bts-world-tour-love-yourself-speak-yourself-in-brazil-ingressos.html?affiliate=BR1&doc=artistPages/tickets&fun=artist&action=tickets&kuid=565077" class="card-text name-evt">BTS</a></p>
+                  </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="src/img/skuta-card.jpg" alt="Festival Skuta">
+                  <div class="card-body">
+                    <p class="card-text date-time">sáb, 25 de maio, 18:00</p>
+                    <p class="card-text local">Arena Anhembi</p>
+                    <a href="https://www.ingressorapido.com.br/event/30229-1/" class="card-text name-evt">FESTIVAL SKUTA</a></p>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
   <!-- Card destaques finish -->
 
-  <!-- Card foruns start -->
-        <div class="col-md-6 gedf-main">
+  <!-- Section main event start -->
+        <div class="col-md-6 gedf-main"><br>
+          <h5 class="h5">Rolês de hoje</h5><br>
           <div id="cardSpot"></div>
           <div id="cardCommon"></div>
         </div>
+  <!-- Section main event finish -->
+
+  <!-- Card foruns start -->
         <div class="col-md-3 ">
           <div class="card gedf-card">
             <div class="card-body">
-              <h5 class="card-title">Fóruns</h5>
+              <h5 class="card-title h5">Avaliações</h5>
               <h6 class="card-subtitle mb-2 text-muted"></h6>
               <p class="card-text"></p>
               <section>
@@ -165,10 +184,11 @@
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="src/js/config.js"></script>
-  <script src="src/js/publica.js"></script>
-  <script src="src/js/login.js"></script>
   <script src="src/js/eventData.js"></script>
   <script src="src/js/template.js"></script>
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ce550934f1ee2a6"></script>
+
 </body>
 
 </html>
