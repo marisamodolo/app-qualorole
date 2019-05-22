@@ -22,9 +22,10 @@ function geoSuccess(position) {
     document.getElementById('mapContainer'),
     defaultLayers.normal.map,
     {
-      zoom: 10,
-      center: { lat: 52.51,
-      lng: 13.4 }
+
+      zoom: 12,
+      center: { lat: lat, lng: long }
+
     });
 
   // Create the parameters for the routing request:
@@ -34,7 +35,7 @@ function geoSuccess(position) {
     // The start point of the route:
     'waypoint0': `geo!${lat},${long}`,
     // The end point of the route:
-    'waypoint1': `geo!${lat},${long}`,
+    'waypoint1': `geo!-23.556619,-46.645143`,
     // To retrieve the shape of the route we choose the route
     // representation mode 'display'
     'representation': 'display'
