@@ -18,13 +18,12 @@ $(document).ready(function () {
 
   });
 
-  $('#login-submit').click(login);
   $('#register-submit').click(createUser);
+  $('#login-submit').click(login);
   $('#button-logout').click(logout);
 
   function createUser(e) {
     e.preventDefault();
-    
 
     let newUserName = $('#name').val();
     let email = $('#email').val();
@@ -32,13 +31,12 @@ $(document).ready(function () {
     let newUserConfirmPass = $('#confirm-password').val();
 
     if (password === newUserConfirmPass) {
-        auth.createUserWithEmailAndPassword(email, password)
+      auth.createUserWithEmailAndPassword(email, password)
         .then(function (cred) {
           let userId = cred.user.uid;
           db.collection('user').doc(userId).set({
             name: newUserName,
             email: email,
-            
           }).then(function () {
             window.location = 'feed.html?id=' + userId;
           })
@@ -58,12 +56,11 @@ $(document).ready(function () {
 
   function login(e) {
     e.preventDefault();
-    
 
     let email = $('#login-email').val();
     let password = $('#login-password').val();
 
-      auth.signInWithEmailAndPassword(email, password)
+    auth.signInWithEmailAndPassword(email, password)
       .then(function (cred) {
         let userId = cred.user.uid;
         window.location = 'feed.html?id=' + userId;
@@ -72,8 +69,7 @@ $(document).ready(function () {
         let errorMessage = error.message;
         bootbox.alert(`Erro: ${errorMessage}`);
       })
-
-    $('.register-submit').submit(function () {
+      $('.register-submit').submit(function () {
       if ($('.login-password').val() == null || $('.login-submit').val() == "") {
         bootbox.alert('Campos Obrigatórios.');
         return false;
@@ -81,17 +77,11 @@ $(document).ready(function () {
     });
   }
 
-  
-
-  const authGoogleButton = $('#authGoogleButton')
-
   $('#authGoogleButton').click(function (event) {
     event.preventDefault();
     const provider = new firebase.auth.GoogleAuthProvider();
     signIn(provider);
   });
-
-  const authFacebookButton = $("#authFacebookButton")
 
   $('#authFacebookButton').click(function (event) {
     event.preventDefault();
@@ -100,23 +90,20 @@ $(document).ready(function () {
   });
 
   function signIn(provider) {
-    firebase.auth()
-      .signInWithPopup(provider)
-      .then(function (result) {
-        let token = result.credential.accessToken;
-        let user = result.user;
+    auth.signInWithPopup(provider)
+      .then(function (response) {
+        let token = response.credential.accessToken;
+        let user = response.user;
         window.location = 'feed.html?id=' + user.uid;
       }).catch(function (error) {
         bootbox.alert('Falha na autenticação');
       });
-
-  }
+ }
 
   function logout() {
-    firebase.auth()
-      .signOut()
+    auth.signOut()
       .then(function () {
-        window.location = 'index.html?id=' + user;
+        window.location = 'index.html?id=';
       })
   }
 
