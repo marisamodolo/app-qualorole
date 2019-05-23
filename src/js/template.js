@@ -24,7 +24,8 @@ function createPost(event, category, filter){
           <h5 class="card-title name-evt">${info.evento}</h5>
           <p class="card-text text">${info.descricao}</p>
           <p class="card-text text"><small class="text-muted">${info.endereço}</small></p>
-          <a href="#" id-info=${idPost} class="btn btn-primary text">Ir pro rolê</a>
+          <a href="map.html" id-info=${idPost} class="btn btn-primary text">Ir pro rolê</a>
+
         </section>
       </section>
       `)
@@ -51,5 +52,13 @@ $(document).ready(function () {
   $('.button-logout').click(function() {
     console.log("vabab")
       window.location = `index.html`;
+  })
+})
+
+$(document).ready(function () {
+  console.log("anajd")
+  $('.button-home').click(function() {
+    console.log("vabab")
+      window.location = `feed.html`;
   })
 })
