@@ -39,7 +39,7 @@ $(document).ready(function () {
     }
   });
 
-  $('#button-logout').click(logout);
+  
 
   function messagePost(date, message, user, visibility, key, likes) {
     $('#posts-container').append(`
