@@ -25,7 +25,6 @@ function createPost(event, category, filter){
           <p class="card-text text">${info.descricao}</p>
           <p class="card-text text"><small class="text-muted">${info.endereço}</small></p>
           <a href="map.html" id-info=${idPost} class="btn btn-primary text">Ir pro rolê</a>
-
         </section>
       </section>
       `)

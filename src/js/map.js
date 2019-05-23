@@ -22,6 +22,7 @@ function geoSuccess(position) {
     document.getElementById('mapContainer'),
     defaultLayers.normal.map,
     {
+      
       zoom: 12,
       center: { lat: lat, lng: long }
     });
